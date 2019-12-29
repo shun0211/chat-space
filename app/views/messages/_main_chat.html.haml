@@ -1,0 +1,35 @@
+.chat-main
+  .main-header
+    .main-header__leftbox
+      %h2.main-header__leftbox__current-group
+        スノーボード
+      %ul.main-header__leftbox__member-list
+        member:
+        %li.main-header__leftbox__member-list__member
+          shun
+    = link_to '#' do
+      .main-header__edit-btn
+        edit
+  .message
+    .message__upper-info
+      %p.message__upper-info__talker
+        shun
+      %p.message__upper-info__date
+        2019/12/27(Fri) 13:44:44
+    %p.message__text
+      来週滑りに行きましょう
+    .message__upper-info
+      %p.message__upper-info__talker
+        shun
+      %p.message__upper-info__date
+        2019/12/27(Fri) 13:44:44
+    %p.message__text
+      滑りに行きましょう
+  .form
+    %form.new_message#new_message
+      .input-box
+        %input.input-box__text{placeholder: 'type a message', type: 'text'}
+        %label.input-box__image{for: 'message_image'}
+          %i.far.fa-images
+          %input.input-box__image__file{type: 'file', id: 'message_image'}
+      %input.submit-btn{type: 'submit', value: 'Send'}
