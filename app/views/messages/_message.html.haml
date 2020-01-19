@@ -1,0 +1,19 @@
+.message
+  .message__upper-info
+    %p.message__upper-info__talker
+      = message.user.name
+    %p.message__upper-info__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  %p.message__text
+    - if message.content.present?
+      = message.content
+    = image_tag message.image.url, class: 'message__image' if message.image.present?
+ 
+-# .form
+-#   %form.new_message#new_message
+-#     .input-box
+-#       %input.input-box__text{placeholder: 'type a message', type: 'text'}
+-#       %label.input-box__image{for: 'message_image'}
+-#         %i.far.fa-images
+-#         %input.input-box__image__file{type: 'file', id: 'message_image'}
+-#     %input.submit-btn{type: 'submit', value: 'Send'}

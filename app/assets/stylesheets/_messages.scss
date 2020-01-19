@@ -60,7 +60,7 @@
 .chat-main{
   background-color: #ffffff;
   height: 100vh;
-  width: calc(100% - 300px);
+  width: calc(100vw - 300px);
    .main-header{
     height: 100px;
     display: flex;
@@ -75,7 +75,6 @@
            color: #999999;
            font-size: 12px;
            display: flex;
-           padding-top: 15px;
          }
       }
       .main-header__edit-btn{
@@ -90,27 +89,32 @@
 
       }
    }
-   .message{
-    height: calc(100% - 100px - 90px);
+   .messages{
+    height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 35px 40px;
-     .message__upper-info{
-       display: flex;
-        .message__upper-info__talker{
-          color: #333333;
-          font-size: 16px;
+    overflow: scroll;
+     .message{
+        .message__upper-info{
+         display: flex;
+           .message__upper-info__talker{
+            color: #333333;
+            font-size: 16px;
+            }
+             .message__upper-info__date{
+              color: #999999;
+              font-size: 12px;
+              padding-left: 10px;
+            }
+          }
+          .message__text{
+            padding: 12px 0px 46px;
+            color: #434A54;
+            font-size: 14px;
+          }
         }
-        .message__upper-info__date{
-          color: #999999;
-          font-size: 12px;
-        }
-     }
-     .message__text{
-       padding: 12px 0px 46px;
-       color: #434A54;
-       font-size: 14px;
-     }
    }
+
    .form{
     background-color: #d2d2d2;
     height: 90px;
@@ -118,8 +122,9 @@
      .new_message{
        display: flex;
        height: 50px;
+       padding: 0;
         .input-box{
-          width: 100%;
+          width: calc(100vw - 480px);
           position: relative;
            .input-box__text{
              height: 50px;
@@ -151,7 +156,8 @@
 
         }
      }
-}}
+   }
+}
 
 .wrapper{
   display: flex;
