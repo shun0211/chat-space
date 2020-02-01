@@ -55,7 +55,7 @@ $(function(){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }})
     .fail(function() {
-      console.log('error');
+      alert("メッセージ送信に失敗しました");
     })};
 
   $('#new_message').on('submit', function(e){
